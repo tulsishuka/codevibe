@@ -35,21 +35,23 @@ if (response.ok) {
 
   return (
     
-    <div>
-      <div className="">
-      <h1 className="text-center font-bold text-lg">
-        Registation Page
-      </h1>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-[45vw] m-auto mt-10">
+<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-700">
+  <div className="bg-white rounded-2xl shadow-xl w-[90%] max-w-md p-8">
+    
+    <h1 className="text-center text-2xl font-bold text-gray-800 mb-6">Create Your Account</h1>
 
-        <input  value={username} onChange={(e) => { setusername(e.target.value);}}  className="p-2 bg-gray-400  text-white"  placeholder='username'  type='text' name='text'/>
-                <input value={email} onChange={(e) => { setemail(e.target.value);}} className="p-2 bg-gray-400  text-white" placeholder='email'  type='email' name='email'/>
-                <input value={password} onChange={(e) => { setpassword(e.target.value);}} className="p-2 bg-gray-400  text-white" placeholder='password'  type='text' name='password'/>
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+               <input value={username} onChange={(e) => setusername(e.target.value)} className="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500"placeholder="Username"type="text"/>
+          <input    value={email} onChange={(e) => setemail(e.target.value)}className="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500"placeholder="Email"type="email"/>
+      <input value={password} onChange={(e) => setpassword(e.target.value)} className="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="Password"type="password"/>
 
-<button  type='submit' className="p-2 bg-red-900  text-white">submit</button>
-      </form>
-      </div>
-    </div>
+      <button type="submit" className="mt-4 bg-red-600 hover:bg-red-700 transition text-white font-semibold py-3 rounded-lg">Register</button>
+    </form>
+
+    <p className="text-center text-sm text-gray-500 mt-4">Already have an account? <span className="text-red-600 cursor-pointer hover:underline">Login</span></p>
+  </div>
+</div>
+
   )
 }
 
