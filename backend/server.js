@@ -5,17 +5,13 @@ const cors = require('cors');
 const connectDB = require('./config/db');
 const User = require('./model/User');
 const bcrypt = require('bcrypt');
-const salt = 10;
 app.use(cors());
 app.use(express.json()); 
 
 connectDB();
-
 app.get('/', (req, res) => {
     res.send('Welcome to the Express REST API');
 });
-
-
 
 app.post("/register", async (req, res) => {
 
