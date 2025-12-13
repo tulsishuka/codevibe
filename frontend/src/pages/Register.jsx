@@ -46,7 +46,7 @@ if (response.ok) {
       <input value={email}onChange={(e) => {setemail(e.target.value);}}className="p-3 rounded-lg bg-gray-100 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500"placeholder="Email"type="email"name="email"/>
       <input     value={password}onChange={(e) => {setpassword(e.target.value);}}className="p-3 rounded-lg bg-gray-100 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500"placeholder="Password"type="text"name="password"/>
 
-      <button type="submit" className="p-3 mt-2 bg-red-600 hover:bg-red-700 transition rounded-lg text-white font-semibold">Submit</button>
+      <button type="submit" className="p-3 mt-2 bg-gray-600 text-white hover:bg-red-700 transition rounded-lg text-white font-semibold">Submit</button>
     </form>
   </div>
 </div>
